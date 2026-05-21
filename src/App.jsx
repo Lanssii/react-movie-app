@@ -15,7 +15,7 @@ function App() {
         searchValue={searchValue}
         setSearchValue={setSearchValue}
       />
-      <MovieSection />
+      <MovieSection searchValue={searchValue} />
     </>
   );
 }
