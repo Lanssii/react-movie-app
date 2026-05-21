@@ -1,6 +1,7 @@
 import "./Header.css";
 
 function Header(props) {
+  console.log(props.searchValue);
   return (
     <header>
       <div className="header-container container">
@@ -15,6 +16,10 @@ function Header(props) {
             id="search-bar"
             placeholder="Search movies..."
             aria-label="Search movies"
+            value={props.searchValue}
+            onChange={(e) => {
+              props.setSearchValue(e.target.value);
+            }}
           />
         </div>
 
