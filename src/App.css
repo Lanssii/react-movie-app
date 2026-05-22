@@ -1,11 +1,30 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+:root {
+  --bg: #ffffff;
+  --card: #ffffff;
+  --button: lightgray;
+  --text: #ffffff;
+  --title: #000000;
+  --input-text: #000000;
+}
+
+:root.dark {
+  --bg: #0b2a4a;
+  --card: #38a3ff;
+  --button: #0b2a4a;
+  --text: #c8f2ff;
+  --title: #fffff;
+  --input-text: #c8f2ff;
+}
 
 body {
-  margin: 0;
   padding: 0;
+  margin: 0;
+  background-color: var(--bg);
 
   font-family: "DM Sans", sans-serif;
 }
+
 * {
   box-sizing: border-box;
 }

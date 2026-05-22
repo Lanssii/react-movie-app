@@ -3,7 +3,8 @@
   flex-direction: column;
   gap: 12px;
 
-  background-color: white;
+  background-color: var(--card);
+
   border-radius: 18px;
   overflow: hidden;
 
@@ -45,7 +46,7 @@
 .movie-card h3 {
   padding: 0 18px;
   margin: 0;
-  color: #222;
+  color: var(--title);
 }
 .movie-date {
   color: #777;
@@ -61,7 +62,7 @@
   border: none;
   border-radius: 12px;
 
-  background-color: lightgray;
+  background-color: var(--button);
 
   font-size: 15px;
   font-weight: 500;

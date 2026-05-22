@@ -1,7 +1,23 @@
+import { useEffect, useState } from "react";
 import "./Header.css";
 
 function Header(props) {
   console.log(props.searchValue);
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  const themeToggle = () => {
+    setIsDarkMode(!isDarkMode);
+  };
+
+  useEffect(() => {
+    console.log("lana");
+    const root = document.documentElement;
+    if (isDarkMode) {
+      root.classList.add("dark");
+    } else {
+      root.classList.remove("dark");
+    }
+  }, [isDarkMode]);
   return (
     <header>
       <div className="header-container container">
@@ -23,7 +39,9 @@ function Header(props) {
           />
         </div>
 
-        <button className="theme-btn">Dark Mode</button>
+        <button className="theme-btn" onClick={themeToggle}>
+          Dark Mode
+        </button>
       </div>
     </header>
   );

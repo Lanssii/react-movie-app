@@ -37,6 +37,7 @@ function MovieSection(props) {
             {movieData.map((movie) => {
               return (
                 <MovieCard
+                  key={movie.imdbID}
                   Poster={movie.Poster}
                   Title={movie.Title}
                   Year={movie.Year}
