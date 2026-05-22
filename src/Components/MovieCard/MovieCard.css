@@ -1,10 +1,23 @@
 .movie-card {
   display: flex;
   flex-direction: column;
+  gap: 12px;
 
-  border-radius: 12px;
-  box-shadow: 5px 10px 10px 5px rgba(0, 0, 0, 0.2);
-  padding: 20px;
+  background-color: white;
+  border-radius: 18px;
+  overflow: hidden;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  cursor: pointer;
+}
+
+.movie-card:hover {
+  transform: translateY(-6px);
+
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.18);
 }
 
 .movie-date {
@@ -14,17 +27,56 @@
 
 .image-container {
   width: 100%;
+  height: 320px;
+  overflow: hidden;
 }
 
 .image-container img {
   width: 100%;
-  object-fit: contain;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
 }
 
+.movie-card:hover .image-container img {
+  transform: scale(1.05);
+}
+
+.movie-card h3 {
+  padding: 0 18px;
+  margin: 0;
+  color: #222;
+}
+.movie-date {
+  color: #777;
+  font-size: 14px;
+
+  margin: 0;
+  padding: 0 18px;
+}
 .favorites-btn {
-  padding: 8px 16px;
-  background-color: lightgray;
+  margin: 0 18px 18px;
+  padding: 12px;
+
   border: none;
   border-radius: 12px;
+
+  background-color: lightgray;
+
+  font-size: 15px;
+  font-weight: 500;
+
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.favorites-btn:hover {
+  transform: scale(1.03);
+
+  background-color: #ff5c7c;
+  color: white;
+}
+
+.favorites-btn:active {
+  transform: scale(0.98);
 }
