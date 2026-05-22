@@ -3,21 +3,27 @@ import "./Header.css";
 
 function Header(props) {
   console.log(props.searchValue);
-  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  const [theme, setTheme] = useState(() => {
+    const savedTheme = localStorage.getItem("theme");
+    return savedTheme === "true";
+  });
 
   const themeToggle = () => {
-    setIsDarkMode(!isDarkMode);
+    setTheme(!theme);
   };
 
   useEffect(() => {
-    console.log("lana");
     const root = document.documentElement;
-    if (isDarkMode) {
+
+    if (theme) {
       root.classList.add("dark");
     } else {
       root.classList.remove("dark");
     }
-  }, [isDarkMode]);
+
+    localStorage.setItem("theme", theme);
+  }, [theme]);
   return (
     <header>
       <div className="header-container container">
