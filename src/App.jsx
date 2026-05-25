@@ -11,7 +11,7 @@ function App() {
     <>
       <Header
         imgLogo={logo}
-        title="MovieLab"
+        title="MovieExplorer"
         searchValue={searchValue}
         setSearchValue={setSearchValue}
       />
