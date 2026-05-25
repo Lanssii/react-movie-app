@@ -2,7 +2,7 @@
 :root {
   --bg: #ffffff;
   --card: #ffffff;
-  --button: lightgray;
+  --FavButton: lightpink;
   --text: #ffffff;
   --title: #000000;
   --input-text: #000000;
@@ -11,7 +11,7 @@
 :root.dark {
   --bg: #0b2a4a;
   --card: #38a3ff;
-  --button: #0b2a4a;
+  --FavButton: #0b2a4a;
   --text: #c8f2ff;
   --title: #ffffff;
   --input-text: #c8f2ff;
