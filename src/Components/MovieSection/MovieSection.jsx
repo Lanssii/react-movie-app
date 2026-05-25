@@ -39,13 +39,14 @@ function MovieSection(props) {
     <>
       <section className="movie-section">
         <div className="movie-container container">
-          <h3>Movies</h3>
+          <h2>Movies</h2>
 
           <div className="movie-list">
             {movieData.map((movie) => {
               return (
                 <MovieCard
                   key={movie.imdbID}
+                  imdbID={movie.imdbID}
                   Poster={movie.Poster}
                   Title={movie.Title}
                   Year={movie.Year}
