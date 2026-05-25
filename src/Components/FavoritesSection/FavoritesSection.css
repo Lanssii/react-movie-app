@@ -1,9 +1,13 @@
 .favorites-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(5, 1fr);
   gap: 30px;
 }
 
 .favorites-container h2 {
+  color: var(--title);
+}
+
+.favorites-info {
   color: var(--title);
 }
