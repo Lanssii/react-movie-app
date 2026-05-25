@@ -49,6 +49,8 @@ function MovieSection(props) {
                   Poster={movie.Poster}
                   Title={movie.Title}
                   Year={movie.Year}
+                  favorites={props.favorites}
+                  setFavorites={props.setFavorites}
                 />
               );
             })}

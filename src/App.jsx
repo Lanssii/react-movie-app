@@ -6,6 +6,7 @@ import logo from "./assets/logo.png";
 
 function App() {
   const [searchValue, setSearchValue] = useState("");
+  const [favorites, setFavorites] = useState([]);
 
   return (
     <>
@@ -15,7 +16,11 @@ function App() {
         searchValue={searchValue}
         setSearchValue={setSearchValue}
       />
-      <MovieSection searchValue={searchValue} />
+      <MovieSection
+        searchValue={searchValue}
+        favorites={favorites}
+        setFavorites={setFavorites}
+      />
     </>
   );
 }
