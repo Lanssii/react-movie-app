@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import Header from "./Components/Header/Header.jsx";
 import MovieSection from "./Components/MovieSection/MovieSection.jsx";
-import FavoritesSection from "./Components/favoritesSection/favoritesSection.jsx";
+import FavoritesSection from "./Components/FavoritesSection/FavoritesSection.jsx";
 import logo from "./assets/logo.png";
 
 function App() {
