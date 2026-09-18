@@ -23,8 +23,6 @@ function MovieSection(props) {
         const response = await fetch(url);
         const data = await response.json();
 
-        console.log(data.Search);
-
         setMovieData((prev) =>
           page === 1 ? data.Search || [] : [...prev, ...(data.Search || [])]
         );
